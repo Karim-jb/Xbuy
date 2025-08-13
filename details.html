@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>details</title>
+    <script src="appearence.js" defer></script>
+    <script src="home-data.js" defer></script>
+    <script src="all-data.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="btn-up" id="btn-up">^</button>
+    <button class="btn-down" id="btn-down">Down</button>
+
+    <nav>
+      <div class="w-container">
+        <div class="nav-box">
+          <div class="nav-wrapper">
+            <div class="title">
+              <h1>
+                <u style="color: gold"><o style="color: gold">X</o></u
+                >BUY
+              </h1>
+              <p style="font-weight: bolder">The ultimate bying experince</p>
+            </div>
+
+            <div class="clicks">
+              <div>
+                <a href="home.html">Home</a>
+              </div>
+              <div>
+                <a href="products.html">Products</a>
+              </div>
+
+              <div class="btn">
+                <button id="theme">Dark Mode</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="details-flex">
+      <div class="details" id="detail4"></div>
+    </div>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id");
+
+      fetch(`https://dummyjson.com/products/${productId}`)
+        .then((res) => res.json())
+        .then((product) => {
+          const detail4 = document.getElementById("detail4");
+          detail4.innerHTML = `
+        <img src="${product.images[0]}" alt="${product.title}" />
+        <h1>${product.title}</h1>
+        <h3>Price: ${product.price}$</h3>
+        <h3>Category: ${product.category}</h3>
+        <h3>Rating: ${product.rating}/5</h3>
+        <h3>Stock: ${product.stock}</h3>
+        <p> ${product.description}<p>
+          <h3>${product.returnPolicy}</h3>
+      `;
+        });
+    </script>
+
+    <div class="order"><a href="#">ORDER NOW!</a></div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-flex">
+          <div class="flex">
+            <a href="#">ABOUT US</a>
+            <a href="#">CONTACT</a>
+            <a href="#">BOOKS</a>
+            <a href="#">HELP</a>
+            <a href="products.html">PRODUCTS</a>
+          </div>
+
+          <div class="para">
+            <p>
+              Were looking forward to expand our comunity, dont waste time and
+              engage now to see future features and beyond🛒
+            </p>
+          </div>
+
+          <div class="logos">
+            <a href="#"
+              ><img src="./images/Facebook_logo_(square).png.webp"
+            /></a>
+            <a href="#"><img src="./images/Google__G__logo.svg.webp" /></a>
+            <a href="#"><img src="./images/insta.webp" /></a>
+            <a href="#"><img src="./images/X.svg" /></a>
+          </div>
+
+          <div class="last">
+            <p>2025 ALL rights reserverd@</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
