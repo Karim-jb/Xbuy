@@ -56,7 +56,6 @@ body {
   width: 100%;
   border-radius: 50px;
   height: 150px;
-  position: sticky;
 }
 
 .w-container .nav-box .nav-wrapper {
@@ -337,7 +336,7 @@ body {
 .footer-container {
   height: 500px;
   background-color: rgb(39, 39, 173);
-  padding: 40px 40px;
+  padding: 40px 20px;
 }
 
 .footer-container .footer-flex {
@@ -450,7 +449,7 @@ body {
 .details {
   width: 500px;
   height: 500px;
-  background-color: cadetblue;
+  background-color: rgb(205, 180, 17);
   border-radius: 50px;
   text-align: center;
   padding: 20px;
@@ -572,6 +571,7 @@ body {
   .why-choose-us .container-s .w-55 img {
     width: 200px;
     height: 200px;
+    padding-left: 30px;
   }
   .why-choose-us .container-s {
     padding: 0px;
@@ -595,7 +595,7 @@ body {
   }
 
   .why-choose-us .container-s .w-45 .abilities p {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .footer-container .flex a {
@@ -622,6 +622,98 @@ body {
     gap: 30px;
     align-items: center;
   }
+}
+
+@media screen and (max-width: 500px){
+
+    .w-container .nav-box .nav-wrapper .clicks a {
+    padding: 3px 3px;
+  }
+
+  .w-container .nav-box .nav-wrapper .clicks{
+    padding-left: 30px;
+    gap: 10px;
+  }
+
+  .w-container .nav-box .nav-wrapper .title{
+   width: 40%;
+}
+
+.w-40 a {
+  padding: 10px;
+}
+
+.about-us-container img{
+  height: 200px;
+}
+
+.about-us-container .w-60 .half1 .review .line{
+  width: 80px;
+}
+
+.btn-up{
+  left: 87.2%;
+  z-index: 1;
+  top:80%;
+}
+
+.btn-down{
+  left: 87.3%;
+  z-index: 1;
+  bottom:80%;
+}
+.why-choose-us .container-s .w-55 img{
+  width: 150px;
+  padding-left: 10px;
+}
+
+.why-choose-us .container-s .w-45 .abilities h1{
+  font-size: 12px;
+}
+
+.why-choose-us .container-s .w-45 p{
+  padding-right: 5px;
+}
+
+.why-choose-us .container-s .w-45 .abilities .title{
+gap: 5px;
+align-items: center;
+}
+.why-choose-us .container-s .w-45 .abilities p {
+  font-size: 13px;
+
+}
+
+.why-choose-us .container-s .w-45 a {
+  margin-top: 30px;
+  padding: 20px 10px;
+}
+
+.why-choose-us .container-s .w-45{
+  height: 800px;
+}
+
+.footer-container .logos{
+  gap: 50px;
+}
+
+.footer-container .flex{
+  padding: 0px 0px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-container .flex a{
+  font-size: 13.3px;
+  font-weight: bolder;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
+
+.details img{
+  height: 120px;
+}
+
 }
 
 .change {
