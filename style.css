@@ -559,10 +559,12 @@ body {
  }
 
  .categories .flex button:hover{
-background-color: aliceblue;
+background-color: rgb(37, 72, 102);
  }
 
-
+.categories .flex button:active{
+background-color: rgb(37, 72, 102);
+ }
 @media screen and (max-width: 1000px) {
    .categories .flex{
     flex-wrap: wrap;
