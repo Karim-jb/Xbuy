@@ -74,11 +74,13 @@
           for (let i = 0; i < allProduct.length; i++) {
             all.addEventListener("click", () => {
               div[i].style.display = "revert";
+              div[i].style.display = 'flex'
             });
           }
           for (let i = 0; i < allProduct.length; i++) {
             fragrances.addEventListener("click", () => {
               div[i].style.display = "revert";
+              div[i].style.display = 'flex'
               if (data.products[i].category !== "fragrances")
                 div[i].style.display = "none";
             });
@@ -86,6 +88,7 @@
           for (let i = 0; i < allProduct.length; i++) {
             groceries.addEventListener("click", () => {
               div[i].style.display = "revert";
+              div[i].style.display = 'flex'
               if (data.products[i].category !== "groceries")
                 div[i].style.display = "none";
             });
@@ -94,6 +97,7 @@
           for (let i = 0; i < allProduct.length; i++) {
             furniture.addEventListener("click", () => {
               div[i].style.display = "revert";
+              div[i].style.display = 'flex'
               if (data.products[i].category !== "furniture")
                 div[i].style.display = "none";
             });
@@ -102,6 +106,7 @@
           for (let i = 0; i < allProduct.length; i++) {
             beauty.addEventListener("click", () => {
               div[i].style.display = "revert";
+              div[i].style.display = 'flex'
               if (data.products[i].category !== "beauty")
                 div[i].style.display = "none";
             });
