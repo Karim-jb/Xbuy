@@ -39,24 +39,75 @@
       </div>
     </nav>
 
+    <section class="categories">
+      <div class="flex">
+        <button id="all">all</button>
+        <button id="beauty">beauty</button>
+        <button id="fragrances">fragrances</button>
+        <button id="furniture">furniture</button>
+        <button id="groceries">groceries</button>
+      </div>
+    </section>
+
     <script>
       fetch("https://dummyjson.com/products")
         .then((res) => res.json())
         .then((data) => {
           let allProduct = data.products;
 
+          let all = document.getElementById("all");
+          let beauty = document.getElementById("beauty");
+          let fragrances = document.getElementById("fragrances");
+          let groceries = document.getElementById("groceries");
+          let furniture = document.getElementById("furniture");
+
           for (let i = 0; i < allProduct.length; i++) {
-            div[
-              i
-            ].innerHTML = `<img src="${allProduct[i].images[0]}" alt="${allProduct[i].title}" />
-                         <h1>${allProduct[i].title}</h1>                                    
-                         <h3>Price: ${allProduct[i].price}$</h3>
-                         <h3>Category: ${allProduct[i].category}</h3>
-                         <h3>Rating: ${allProduct[i].rating}/5</h3>
-                         <h3 style="text-decoration:none";>Stock: ${allProduct[i].stock}</h3>
-                         `;
+            div[i].innerHTML = `<img src="${allProduct[i].images[0]}" alt="${allProduct[i].title}" />
+                               <h1>${allProduct[i].title}</h1>
+                               <h3>Price: ${allProduct[i].price}$</h3>
+                               <h3>Category: ${allProduct[i].category}</h3>
+                               <h3>Rating: ${allProduct[i].rating}/5</h3>
+                               <h3 style="text-decoration:none";>Stock: ${allProduct[i].stock}</h3>
+                               `;
           }
-          for (let i = 0; i < 30; i++) {
+
+          for (let i = 0; i < allProduct.length; i++) {
+            all.addEventListener("click", () => {
+              div[i].style.display = "revert";
+            });
+          }
+          for (let i = 0; i < allProduct.length; i++) {
+            fragrances.addEventListener("click", () => {
+              div[i].style.display = "revert";
+              if (data.products[i].category !== "fragrances")
+                div[i].style.display = "none";
+            });
+          }
+          for (let i = 0; i < allProduct.length; i++) {
+            groceries.addEventListener("click", () => {
+              div[i].style.display = "revert";
+              if (data.products[i].category !== "groceries")
+                div[i].style.display = "none";
+            });
+          }
+
+          for (let i = 0; i < allProduct.length; i++) {
+            furniture.addEventListener("click", () => {
+              div[i].style.display = "revert";
+              if (data.products[i].category !== "furniture")
+                div[i].style.display = "none";
+            });
+          }
+
+          for (let i = 0; i < allProduct.length; i++) {
+            beauty.addEventListener("click", () => {
+              div[i].style.display = "revert";
+              if (data.products[i].category !== "beauty")
+                div[i].style.display = "none";
+            });
+          }
+
+          for (let i = 0; i < allProduct.length; i++) {
             div[i].addEventListener("click", () => {
               window.location.href = `details.html?id=${allProduct[i].id}`;
             });

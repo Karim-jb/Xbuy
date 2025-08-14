@@ -28,6 +28,7 @@ body {
   border: 0px;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .btn-down {
@@ -534,7 +535,38 @@ body {
   }
 }
 
+.categories{
+  padding: 0;
+  margin: 0;
+}
+
+ .categories .flex{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 55px;
+ }
+
+ .categories .flex button{
+  background-color: cyan;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  border: 0px;
+  border-radius: 20px;
+  padding: 20px 0px;
+  cursor: pointer;
+  transition-duration: 0.7s;
+ }
+
+ .categories .flex button:hover{
+background-color: aliceblue;
+ }
+
+
 @media screen and (max-width: 1000px) {
+   .categories .flex{
+    flex-wrap: wrap;
+  }
   .w-container .nav-box .nav-wrapper .clicks {
     gap: 5px;
     flex-direction: column;
@@ -625,6 +657,10 @@ body {
 }
 
 @media screen and (max-width: 500px){
+  .categories .flex{
+    flex-wrap: wrap;
+    gap: 50px;
+  }
 
     .w-container .nav-box .nav-wrapper .clicks a {
     padding: 3px 3px;
@@ -712,6 +748,10 @@ align-items: center;
 
 .details img{
   height: 120px;
+}
+
+.about-us-container .w-60 .half2 .card{
+  background-color: cadetblue;;
 }
 
 }

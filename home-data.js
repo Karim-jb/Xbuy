@@ -8,9 +8,7 @@ fetch("https://dummyjson.com/products")
     console.log(product);
 
     for (let i = 0; i < 4; i++) {
-      div4[
-        i
-      ].innerHTML = `<img src="${product[i].images[0]}" alt="${product[i].title}" />
+      div4[i].innerHTML = `<img src="${product[i].images[0]}" alt="${product[i].title}" />
                          <h1>${product[i].title}</h1>                                    
                          <h3>Price: ${product[i].price}$</h3>
                          <h3>Category: ${product[i].category}</h3>
